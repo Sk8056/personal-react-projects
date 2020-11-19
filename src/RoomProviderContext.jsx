@@ -33,8 +33,14 @@ export default function RoomProviderContext({ children }) {
         return tempItems;
     }
 
+    function getRoom(slug) {
+        let tempRooms = [...rooms];
+        const slugRooms = tempRooms.find(r => r.slug === slug)
+        return slugRooms;
+    }
+
     return (
-        <RoomContext.Provider value={{ rooms, featuredRooms, sortedRooms, loading }}>
+        <RoomContext.Provider value={{ rooms, featuredRooms, sortedRooms, loading, getRoom: getRoom }}>
             {children}
         </RoomContext.Provider>
     )

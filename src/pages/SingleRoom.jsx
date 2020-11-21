@@ -60,9 +60,9 @@ export default function SingleRoom({ history, location, match, isAuth }) {
                 <section className="room-extras">
                     <h6>extras</h6>
                     <ul className="extras">
-                        extras.map((item, index)=> {
+                        {extras.map((item, index) => {
                             return <li key={index}> - {item}</li>
-                        })
+                        })}
                     </ul>
                 </section>
             </section>

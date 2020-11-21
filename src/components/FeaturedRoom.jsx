@@ -7,6 +7,7 @@ import Title from "./Title"
 export default function FeaturedRoom() {
     //object destructuring 
     const { featuredRooms, loading } = useContext(RoomContext)
+
     //newFeaturedRoom is an new array with room components.
     const newFeaturedRooms = featuredRooms.map(room => {
         return <Room key={room.id} room={room} />
